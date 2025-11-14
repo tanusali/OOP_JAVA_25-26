@@ -24,11 +24,6 @@ Both modules work together to form a complete MCQ evaluation system.
 ---
 
 ## 📁 Project Structure  
-mcq_system/
-│
-├── mcq_client/ → Client-side Java app
-└── mcq_server/ → Server-side Java backend
-
 
 
 ---
@@ -62,78 +57,56 @@ mcq_system/
 ## 🧩 How It Works
 
 ### **1. Client requests MCQs**
-GET /api/questions
-
-shell
-Copy code
 
 ### **2. Server returns question list (JSON)**  
 Client displays them to the user.
 
 ### **3. Client submits answers**
-POST /api/submit
-
-makefile
-Copy code
 
 ### **4. Server calculates score**  
 Returns:
+
 ```json
 {
   "score": 8,
   "total": 10
 }
-🛠️ Setup Instructions
-Clone both repositories
-bash
-Copy code
+
 git clone https://github.com/MadhavK3/mcq_client.git
 git clone https://github.com/MadhavK3/mcq_server.git
-▶️ Running the Server (Backend)
-bash
-Copy code
+
 cd mcq_server
 mvn clean install
 mvn spring-boot:run
-Default port: 8080
-
-▶️ Running the Client (Frontend)
-
 cd mcq_client
 mvn clean install
-Then run the main Java file from your IDE or terminal.
-
-Ensure the server is running before starting the client.
-
-📌 Future Enhancements
-Add login/authentication
-
-Timer for each quiz
-
-Category-wise MCQs
-
-Leaderboard & analytics
-
-Persistent DB (MySQL/PostgreSQL)
-
-Admin panel for adding MCQs
-
-👨‍💻 Authors
-
-Name	PRN
-Om	    001
-Atharva	009
-Madhav	023
 
 
+## 📌 Future Enhancements
+Planned improvements and features to be implemented in future releases:
 
-📚 References
-Java Documentation
+- Add login / authentication (JWT or OAuth)  
+- Timer for each quiz (per-question or full-quiz timer)  
+- Category-wise MCQs (filter by topic/difficulty)  
+- Leaderboard & analytics (track top scorers & trends)  
+- Persistent DB (MySQL / PostgreSQL) for storing quizzes and results  
+- Admin panel for adding/editing/removing MCQs
 
-Spring Boot Docs
+---
 
-TutorialsPoint
+## 👨‍💻 Authors  
 
-GeeksForGeeks
+| Name     | PRN |
+|----------|-----:|
+| Om       |  001 |
+| Atharva  |  009 |
+| Madhav   |  023 |
 
-Javatpoint
+---
+
+## 📚 References
+- Java Documentation — https://docs.oracle.com/javase/  
+- Spring Boot Docs — https://spring.io/projects/spring-boot  
+- TutorialsPoint — https://www.tutorialspoint.com/java/  
+- GeeksForGeeks — https://www.geeksforgeeks.org/java/  
+- Javatpoint — https://www.javatpoint.com/java-tutorial
